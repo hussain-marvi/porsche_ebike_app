@@ -25,7 +25,13 @@ This project is a Flutter macOS application designed to interface with Bluetooth
 
 ### Local Setup
 
-1. **Install Dependencies**:
+1. **Install & Use usb_serial for macOS USB Communication**
+   The **usb_serial** package does NOT support macOS by default, but you can use libusb as a workaround.
+      -  **Install libusb on macOS**
+      ```bash
+      brew install libusb
+
+2. **Install Dependencies**:
    Before running the project, ensure that the following dependencies are installed on your local machine:
 
    - **Flutter**: Ensure you have Flutter installed on your machine. Follow the installation instructions here: [Flutter Installation Guide](https://flutter.dev/docs/get-started/install).
@@ -36,22 +42,22 @@ This project is a Flutter macOS application designed to interface with Bluetooth
      sudo gem install cocoapods
      ```
 
-2. **Install Flutter Dependencies**:
+3. **Install Flutter Dependencies**:
    Navigate to your project folder and run:
    ```bash
    flutter pub get
 
-3. **Running the Project**:
+4. **Running the Project**:
    Navigate to your project folder and run:
    ```bash
    flutter run -d macos
 
-4. **Generate Mocks for Testing**:
+5. **Generate Mocks for Testing**:
    If you haven't generated mocks yet, run:
    ```bash
    flutter pub run build_runner build
 
-5. **Testing**:
+6. **Testing**:
    To run the tests, use:
    ```bash
    flutter test
